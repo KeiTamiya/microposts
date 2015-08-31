@@ -1,0 +1,25 @@
+<h1>Edit</h1>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <%= form_for(@user) do |f| %>
+        
+        <%= render 'shared/error_messages', object: f.object %>
+        
+        <%= f.label :profile, "Description" %>
+        
+        <%= f.text_area :profile, :placeholder => "Fill in your description in 144 words", :class => "form-control" %>
+        
+        <%= f.label :email %>
+        
+        <%= f.text_field :email, :class => "form-control" %>
+        
+        <%= f.label :area, "Living Area" %>
+        
+        <%= f.text_field :area, :class => "form-control" %>
+        
+        <%= f.submit "Update", class: "btn btn-large btn-primary" %>
+        
+        <% end %>
+    </div>
+</div>
