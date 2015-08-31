@@ -1,0 +1,9 @@
+<h1>Profile</h1>
+
+<div class="panel panel-default">
+    <div class="panel-body">
+        <% @users.each do |user| %>
+            <span class="label label-info"><%= user.information %></span>
+        <% end %>
+    </div>
+</div>
