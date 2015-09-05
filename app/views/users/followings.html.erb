@@ -1,0 +1,13 @@
+<h1>フォロー一覧</h1>
+<div class="row">
+    <% if @following_users %>
+        <% @following_users.each do |following_user| %>
+            <div class="col-md-6">
+                <p><%= following_user.name %></p>
+                <p><%= following_user.profile %></p>
+            </div>
+        <% end %>
+    <% else %>
+        <p>まだ誰もフォローしていません</p>
+    <% end %>
+</div>

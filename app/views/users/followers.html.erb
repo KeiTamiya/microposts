@@ -1,0 +1,13 @@
+<h1>フォロワー一覧</h1>
+<div class="row">
+    <% if @follower_users %>
+        <% @follower_users.each do |follower_user| %>
+            <div class="col-md-6">
+                <p><%= follower_user.name %></p>
+                <p><%= follower_user.profile %></p>
+            </div>
+        <% end %>
+    <% else %>
+        <p>フォロワーはまだいません</p>
+    <% end %>
+</div>
