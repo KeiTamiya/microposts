@@ -1,10 +1,12 @@
 <h1>フォロワー一覧</h1>
 <div class="row">
-    <% if @follower_users %>
+    <% if @follower_users.any? %>
         <% @follower_users.each do |follower_user| %>
             <div class="col-md-6">
-                <p><%= follower_user.name %></p>
-                <p><%= follower_user.profile %></p>
+                <div class="panel panel-default">
+                    <div class="panel-heading"><%= follower_user.name %></div>
+                    <div class="panel-body"><%= follower_user.profile %></div>
+                </div>
             </div>
         <% end %>
     <% else %>

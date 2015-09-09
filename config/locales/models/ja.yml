@@ -1,0 +1,18 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+      relationship: フォローフォロワー関係
+      micropost: ツイート
+    attributes:
+      user:
+        name: 名前
+        email: メールアドレス
+        password: パスワード
+        password_confirmation: パスワード確認
+        profile: 基本情報
+        area: 居住地域
+      micropost:
+        content: ツイート内容
+        image: 画像
+        

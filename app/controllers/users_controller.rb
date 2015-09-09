@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
-    @microposts = @user.microposts
+    @microposts = @user.microposts.page(params[:page])
   end
   
   def new
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
   
   def followers
     @user = User.find(params[:id])
-    @followers = @user.follower_users
+    @follower_users = @user.follower_users
   end
   
   private
