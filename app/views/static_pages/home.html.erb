@@ -11,14 +11,14 @@
         <div class="col-md-8">
             <h3>Micropost Feed</h3>
             <div id="feed_items">
-                <%= render :partial => 'shared/feed', :collection => @feed_items %>
+                <%= render :partial => 'shared/feed' %>
             </div>
+            <%= link_to_next_page(@feed_items, 'more', remote: true, id: 'view_more', class: 'btn btn-primary') %>
         </div>
     </div>
 <% else %>
     <div class="center jumbotron">
         <h1>Welcome to the Microposts</h1>
-        
         <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
     </div>
 <% end %>
