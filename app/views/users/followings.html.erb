@@ -1,0 +1,15 @@
+<h1>フォロー一覧</h1>
+<div class="row">
+    <% if @following_users.any? %>
+        <% @following_users.each do |following_user| %>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading"><%= following_user.name %></div>
+                    <div class="panel-body"><%= following_user.profile %></div>
+                </div>
+            </div>
+        <% end %>
+    <% else %>
+        <p>まだ誰もフォローしていません</p>
+    <% end %>
+</div>
